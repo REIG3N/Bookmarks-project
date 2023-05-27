@@ -1,17 +1,19 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ListedBook from '../components/ListedBook';
 import BookListForm from '../components/BookListForm';
+import useLocalStorage from '../customHooks/useLocalStorage';
 
 export default function MyBooks() {
-    const [allBookList, SetAllBookList] = useState([]);
-    const [readingBookList, SetReadingBookList] = useState([]);
-    const [finishedBookList, SetFinishedBookList] = useState([]);
-    const [planToReadlBookList, SetPlanToReadBookList] = useState([]);
+    const [allBookList, SetAllBookList] = useLocalStorage('ALL_BOOK_LIST',"");
+    const [readingBookList, SetReadingBookList] = useLocalStorage('READING_BOOK_LIST',"");
+    const [finishedBookList, SetFinishedBookList] =useLocalStorage('FINISHED_BOOK_LIST',"");
+    const [planToReadlBookList, SetPlanToReadBookList] = useLocalStorage('PLANNED_BOOK_LIST',"");
 
   const AddToBookLists = (bookToAdd) => {
     const SelectedListCopy = [...allBookList];
     SelectedListCopy.push(bookToAdd);
     SetAllBookList(SelectedListCopy); 
+
      if (bookToAdd.status == "Currently reading"){
       const SelectedListCopy = [...readingBookList];
       SelectedListCopy.push(bookToAdd);
@@ -35,7 +37,8 @@ export default function MyBooks() {
 
       <h3>Tout les livres</h3>
       <ul>
-        {allBookList.map(book => {
+        {allBookList && allBookList.map(book => {
+        
           return (
             <ListedBook book={book} key={book.id} />
           );            
@@ -44,7 +47,7 @@ export default function MyBooks() {
       </ul>
       <h3>En cours de lecture</h3>
       <ul>
-        {readingBookList.map(book => {
+        {readingBookList && readingBookList.map(book => {
           return (
             <ListedBook book={book} key={book.id} />
           )
@@ -52,7 +55,7 @@ export default function MyBooks() {
       </ul>
       <h3>Déjà Lues</h3>
       <ul>
-        {finishedBookList.map(book => {
+        {finishedBookList && finishedBookList.map(book => {
           return (
             <ListedBook book={book} key={book.id} />
           )
@@ -60,7 +63,7 @@ export default function MyBooks() {
       </ul>
       <h3>A lire plus tard</h3>
       <ul>
-        {planToReadlBookList.map(book => {
+        {planToReadlBookList && planToReadlBookList.map(book => {
           return (
             <ListedBook book={book} key={book.id} />
           )
