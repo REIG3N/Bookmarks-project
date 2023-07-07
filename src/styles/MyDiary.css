@@ -1,13 +1,3 @@
-.container {
-}
-.sessionForm{
-    display: flex;
-    background-color: antiquewhite;
-
-}
-.sessionForm input{
-    width: 200px;
-}
 .mainForm {
     display: flex;
     flex-direction: column;
@@ -15,12 +5,10 @@
 .freeForm{
     display: none;
     flex-direction: column;
-
 }
 .guidedForm{
     display: none;
     flex-direction: column;
-
 }
 .invisble{
     display: none;

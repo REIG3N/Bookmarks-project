@@ -2,8 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-.active{
-    color: red;
+.nav{
+    container-type: inline-size;
+}
+@container (max-width: 500px){
+    .nav{
+        background-color: red;
+    }
 }

@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react'
 import ListedBook from '../components/ListedBook';
 import BookListForm from '../components/BookListForm';
 import useLocalStorage from '../customHooks/useLocalStorage';
+import ListedSession from '../components/ListedSession';
 
 export default function MyBooks() {
-    const [allBookList, SetAllBookList] = useLocalStorage('ALL_BOOK_LIST',"");
+    const [allBookList, SetAllBookList] = useLocalStorage('ALL_BOOK_LIST',[]);
     const [readingBookList, SetReadingBookList] = useLocalStorage('READING_BOOK_LIST',"");
     const [finishedBookList, SetFinishedBookList] =useLocalStorage('FINISHED_BOOK_LIST',"");
     const [planToReadlBookList, SetPlanToReadBookList] = useLocalStorage('PLANNED_BOOK_LIST',"");
@@ -13,7 +14,6 @@ export default function MyBooks() {
     const SelectedListCopy = [...allBookList];
     SelectedListCopy.push(bookToAdd);
     SetAllBookList(SelectedListCopy); 
-
      if (bookToAdd.status == "Currently reading"){
       const SelectedListCopy = [...readingBookList];
       SelectedListCopy.push(bookToAdd);
@@ -70,6 +70,7 @@ export default function MyBooks() {
         })}
       </ul>
       <BookListForm AddToBookLists={AddToBookLists} />
+
     </>
   )
 }

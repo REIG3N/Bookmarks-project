@@ -15,7 +15,7 @@ export default function MyDiary() {
 
   return (
     <>
-      <h1>Mon journal de lecture</h1>
+      <h1>Vos notes de lectures</h1>
       <SessionListForm AddToSessionList={AddToSessionList} />
       <h2>Historique de lecture</h2>
       <ul>

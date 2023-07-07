@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { Btn, ConfirmBtn, OpenBtn } from './styledComponents/Btn';
+import { SelectInput } from './styledComponents/SelectInput';
+
 
 export default function BookListForm({ AddToBookLists }) {
   const [titleInput, SetTitleInput] = useState("");
@@ -12,7 +15,6 @@ export default function BookListForm({ AddToBookLists }) {
       title: titleInput,
       autor: autorInput,
       status: statusInput,
-
     }
     AddToBookLists(bookToAdd)
     SetTitleInput("")
@@ -36,19 +38,18 @@ export default function BookListForm({ AddToBookLists }) {
       <label htmlFor="status-select">Status :</label>
 
 
-      <select
+      <SelectInput
         name="status"
         id="status-select"
         value={statusInput}
         onChange={e => SetStatusInput(e.target.value)}
       >
-        <option></option>
         <option>Currently reading</option>
         <option>Finished</option>
         <option>Plan to read</option>
-      </select>
+      </SelectInput>
 
-      <button type='submit'>Ajouter un livre +</button>
+      <ConfirmBtn type='submit'>Ajouter un livre +</ConfirmBtn>
     </form >
   )
 }
