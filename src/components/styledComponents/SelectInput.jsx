@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export const SelectInput = styled.select`
 width: 100px;
 height: 20px;
-border-radius: 10px;
+border-radius: 8px;
 
-background: #505050;
+background: #427A87;
 color: #D9D9D9;
 
 font-size: 8px;

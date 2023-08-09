@@ -5,18 +5,19 @@ display: flex;
 justify-content:center;
 align-items: center;
 
-width: 100px;
-height: 20px;
-border-radius: 10px;
+width: 90px;
+height: 30px;
+border-radius: 8px;
 
 background: #D9D9D9;
 color: #000;
 
-font-size: 8px;
+font-size: 10px;
 font-weight: 700;
 
 cursor: pointer;
 border: none;
+
 `
 export const DeleteBtn = styled(Btn)`
 background: #8A4444;

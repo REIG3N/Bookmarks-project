@@ -1,17 +1,17 @@
-import { ListedElement } from './styledComponents/ListedElement';
+import { ListedElement, Title, Autor, Status,Infos } from './styledComponents/ListedElement';
 import { DeleteBtn } from './styledComponents/Btn';
 
 
-export default function ListedBook({ book }) {
+export default function ListedBook({ RemoveBook, book }) {
   return (
     <ListedElement>
-      <div className="infos">
-        <p>{book.title}</p>
-        <p>{book.autor}</p>
-        <p>{book.status}</p>
-      </div>
+      <Infos>
+        <Title>{book.title}</Title>
+        <Autor>{book.autor}</Autor>
+        <Status>{book.status}</Status>
+      </Infos>
       <div>
-        <DeleteBtn>Supprimer</DeleteBtn>
+        <DeleteBtn onClick={() => RemoveBook(book)}>Supprimer</DeleteBtn>
       </div>
     </ListedElement>
   )

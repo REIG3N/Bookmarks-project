@@ -17,7 +17,7 @@ export default function MyDiary() {
     <>
       <h1>Vos notes de lectures</h1>
       <SessionListForm AddToSessionList={AddToSessionList} />
-      <h2>Historique de lecture</h2>
+      <h3>Historique de lecture</h3>
       <ul>
         {sessionList.length === 0 && "Pas de note"}
         {sessionList && sessionList.map((session) => {

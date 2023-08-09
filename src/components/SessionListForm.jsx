@@ -51,8 +51,7 @@ export default function SessionListForm({ AddToSessionList }) {
           // listToShow.push([{list_id: list[i].id},{list_title: list[i].title}])
         }
   }
-
-        AllBooksShow()
+   AllBooksShow()
 
   const ShowForm = (stateToChange, SetStateToChange) => {
     !stateToChange ? SetStateToChange(true) : SetStateToChange(false)

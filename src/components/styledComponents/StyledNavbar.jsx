@@ -12,9 +12,6 @@ display: flex;
 justify-content: space-between;
 list-style: none;
 color: #000 !important;
-
-
-
 `
 export const LeftSideNavbar = styled.div`
 width: 30%;
