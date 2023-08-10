@@ -44,7 +44,7 @@ gap: 30px;
 
 
 `
-export const LiNavbar = styled.li`
+export const LiNavbar = styled.div`
 list-style: none;
 @media (max-width: 500px){
     display: none;

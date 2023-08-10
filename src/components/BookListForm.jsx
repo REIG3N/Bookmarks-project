@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Btn, ConfirmBtn, OpenBtn } from './styledComponents/Btn';
 import { SelectInput } from './styledComponents/SelectInput';
-import ShowFormDiv, { DarkBG,FormHeader,FormInputDiv,FormInput} from './styledComponents/FormDiv';
+import ShowDiv, { DarkBG,FormHeader,FormInputDiv,FormInput} from './styledComponents/FormDiv';
 import close_menu from '../../public/close_menu.svg';
 
 
@@ -31,12 +31,12 @@ export default function BookListForm({ AddToBookLists }) {
     <>
       <Btn onClick={(e) => { ShowForm(showForm, SetShowForm) }}>Ajouter un livre +</Btn>
       <DarkBG style={{ display: showForm ? 'block' : 'none' }}>
-        <ShowFormDiv style={{ display: showForm ? 'block' : 'none'}} >
+        <ShowDiv style={{ display: showForm ? 'block' : 'none'}} >
           <FormHeader >
             <h3 style={{ margin: 'auto' }}>Ajouter un livre</h3>
             <button onClick={(e) => { ShowForm(showForm, SetShowForm) }} style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}><img src={close_menu} style={{ width: '20px', height: '20px', }} /></button>
           </FormHeader>
-          
+
           <form onSubmit={AddBook} >
             <FormInputDiv >
               <label htmlFor='title'>Titre :</label>
@@ -70,7 +70,7 @@ export default function BookListForm({ AddToBookLists }) {
             </FormInputDiv>
             <ConfirmBtn type='submit' style={{ margin: 'auto', bottom: '0px' }}>Valider</ConfirmBtn>
           </form >
-        </ShowFormDiv>
+        </ShowDiv>
       </DarkBG>
 
     </>

@@ -5,14 +5,14 @@ display: flex;
 justify-content:center;
 align-items: center;
 
-width: 90px;
+width: 120px;
 height: 30px;
 border-radius: 8px;
 
 background: #D9D9D9;
 color: #000;
 
-font-size: 10px;
+font-size: 11px;
 font-weight: 700;
 
 cursor: pointer;

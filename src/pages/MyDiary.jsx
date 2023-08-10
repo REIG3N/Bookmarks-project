@@ -22,7 +22,7 @@ export default function MyDiary() {
   return (
     <>
       <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
-        <h1>Vos notes de lectures</h1>
+        <h1 style={{paddingBottom: '20px'}}>Vos notes de lectures</h1>
         <SessionListForm
           AddToSessionList={AddToSessionList} />
       </div>
