@@ -4,7 +4,7 @@ const ShowFormDiv = styled.div`
 background: #D9D9D9;
 width: 75%;
 height: auto;
-
+padding: 20px;
 color: #000;
 border-radius: 15px;
 display: flex;
@@ -16,9 +16,9 @@ export default ShowFormDiv
 export const DarkBG = styled.div`
 background: #0000007b;
 z-index: 100000;
-position: fixed;
+position: absolute;
 width: 100%;
-height: 100%;
+height: calc(100% + 120px);
 top: 0;
 left: 0;
 `
@@ -41,7 +41,6 @@ outline: none;
 height: 25px;
 border-radius: 25px;
 padding-left: 5px;
-
 `
 
 

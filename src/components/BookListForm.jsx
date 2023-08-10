@@ -31,11 +31,12 @@ export default function BookListForm({ AddToBookLists }) {
     <>
       <Btn onClick={(e) => { ShowForm(showForm, SetShowForm) }}>Ajouter un livre +</Btn>
       <DarkBG style={{ display: showForm ? 'block' : 'none' }}>
-        <ShowFormDiv style={{ display: showForm ? 'block' : 'none', padding: '20px' }} >
+        <ShowFormDiv style={{ display: showForm ? 'block' : 'none'}} >
           <FormHeader >
             <h3 style={{ margin: 'auto' }}>Ajouter un livre</h3>
             <button onClick={(e) => { ShowForm(showForm, SetShowForm) }} style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}><img src={close_menu} style={{ width: '20px', height: '20px', }} /></button>
           </FormHeader>
+          
           <form onSubmit={AddBook} >
             <FormInputDiv >
               <label htmlFor='title'>Titre :</label>

@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-const StyledBookList = styled.ul`
+const StyledList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   padding: 10px 50px;
 
 `
-export default StyledBookList
+export default StyledList

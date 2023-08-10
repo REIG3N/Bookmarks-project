@@ -1,10 +1,11 @@
+import { ListedElement, Infos, } from './styledComponents/ListedElement';
+
 export default function ListedSession({ session, listToShow }) {
     console.log(session)
 
     return (
-        <>
-            <li>
-                <p>{listToShow}</p>
+        <ListedElement>
+            <Infos>
                 <p>{session.whichBook}</p>
                 <p>{session.duration}</p>
                 <p>{session.summary}</p>
@@ -12,7 +13,7 @@ export default function ListedSession({ session, listToShow }) {
                 <p>{session.subText}</p>
                 <p>{session.feeling}</p>
                 <p>{session.freeNote}</p>
-            </li>
-        </>
+            </Infos>
+        </ListedElement>
     )
 }

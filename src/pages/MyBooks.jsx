@@ -1,9 +1,7 @@
 import ListedBook from '../components/ListedBook';
 import BookListForm from '../components/BookListForm';
 import useLocalStorage from '../customHooks/useLocalStorage';
-import StyledBookList from '../components/styledComponents/StyledBookList';
-
-
+import StyledList from '../components/styledComponents/StyledList';
 
 export default function MyBooks({ }) {
   const [allBookList, SetAllBookList] = useLocalStorage('ALL_BOOK_LIST', []);
@@ -55,45 +53,58 @@ export default function MyBooks({ }) {
 
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' ,flexDirection: 'column' }}>
+      <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
         <h1 >Vos livres</h1>
-        <BookListForm AddToBookLists={AddToBookLists} />
+        <BookListForm
+          AddToBookLists={AddToBookLists} />
       </div>
 
       <h3>Tout les livres</h3>
-      <StyledBookList>
+      <StyledList>
         {allBookList && allBookList.map(book => {
 
           return (
-            <ListedBook book={book} key={book.id} RemoveBook={RemoveBook} />
+            <ListedBook
+              book={book}
+              key={book.id}
+              RemoveBook={RemoveBook} />
           );
 
         })}
-      </StyledBookList>
+      </StyledList>
       <h3>En cours de lecture</h3>
-      <StyledBookList>
+      <StyledList>
         {readingBookList && readingBookList.map(book => {
           return (
-            <ListedBook book={book} key={book.id} RemoveBook={RemoveBook} />
+            <ListedBook
+              book={book}
+              key={book.id}
+              RemoveBook={RemoveBook} />
           )
         })}
-      </StyledBookList>
+      </StyledList>
       <h3>Déjà Lues</h3>
-      <StyledBookList>
+      <StyledList>
         {finishedBookList && finishedBookList.map(book => {
           return (
-            <ListedBook book={book} key={book.id} RemoveBook={RemoveBook} />
+            <ListedBook
+              book={book}
+              key={book.id}
+              RemoveBook={RemoveBook} />
           )
         })}
-      </StyledBookList>
+      </StyledList>
       <h3>A lire plus tard</h3>
-      <StyledBookList>
+      <StyledList>
         {planToReadlBookList && planToReadlBookList.map(book => {
           return (
-            <ListedBook book={book} key={book.id} RemoveBook={RemoveBook} />
+            <ListedBook
+              book={book}
+              key={book.id}
+              RemoveBook={RemoveBook} />
           )
         })}
-      </StyledBookList>
+      </StyledList>
     </>
   )
 }
