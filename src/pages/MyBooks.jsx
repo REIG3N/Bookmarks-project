@@ -60,7 +60,7 @@ export default function MyBooks({ }) {
           AddToBookLists={AddToBookLists} />
       </div>
 
-      <h3 style={{ paddingLeft: '20px' }}>Tout les livres</h3>
+      <h3 style={{ paddingLeft: '20px' }}>Tous les livres</h3>
       <StyledList>
         {allBookList.length === 0 && "Pas de livres"}
         {allBookList && allBookList.map(book => {
