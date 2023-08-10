@@ -80,9 +80,6 @@ export default function SessionListForm({ AddToSessionList, }) {
             <form onSubmit={AddSession}>
               <FormInputDiv>
                 <label htmlFor="whichBookInput" >Quel livre venez-vous de lire ?</label>
-                <div>
-
-                </div>
                 <FormInput type="text" placeholder='...' value={whichBook} onChange={e => SetWhichBook(e.target.value)} />
               </FormInputDiv>
 

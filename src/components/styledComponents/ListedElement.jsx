@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ListedElement = styled.li`
-width: 18.75rem;
+width: 25rem;
 height: 100px;
 
 @media (max-width: 635px){
