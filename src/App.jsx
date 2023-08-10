@@ -9,6 +9,7 @@ export default function App() {
     <>
       <Navbar />
         <Routes>
+          <Route path='/' element={<MyBooks />} />
           <Route path='/mybooks' element={<MyBooks />} />
           <Route path='/mydiary' element={<MyDiary />} />
         </Routes>
