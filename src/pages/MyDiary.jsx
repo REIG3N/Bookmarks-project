@@ -27,7 +27,7 @@ export default function MyDiary() {
           AddToSessionList={AddToSessionList} />
       </div>
 
-      <h3>Historique de lecture</h3>
+      <h3 style={{ paddingLeft: '20px' }}>Historique de lecture</h3>
       <StyledList>
         {sessionList.length === 0 && "Pas de note"}
         {sessionList && sessionList.map((session) => {

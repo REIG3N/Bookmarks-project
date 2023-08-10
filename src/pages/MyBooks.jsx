@@ -60,7 +60,7 @@ export default function MyBooks({ }) {
           AddToBookLists={AddToBookLists} />
       </div>
 
-      <h3>Tout les livres</h3>
+      <h3 style={{ paddingLeft: '20px' }}>Tout les livres</h3>
       <StyledList>
         {allBookList.length === 0 && "Pas de livres"}
         {allBookList && allBookList.map(book => {
@@ -74,7 +74,7 @@ export default function MyBooks({ }) {
 
         })}
       </StyledList>
-      <h3>En cours de lecture</h3>
+      <h3 style={{ paddingLeft: '20px' }}>En cours de lecture</h3>
       <StyledList>
         {readingBookList.length === 0 && "Pas de livres en cours de lecture"} 
         {readingBookList && readingBookList.map(book => {
@@ -86,7 +86,7 @@ export default function MyBooks({ }) {
           )
         })}
       </StyledList>
-      <h3>Déjà Lues</h3>
+      <h3 style={{ paddingLeft: '20px' }}>Déjà Lues</h3>
       <StyledList>
       {finishedBookList.length === 0 && "Pas de livres déjà lues"} 
         {finishedBookList && finishedBookList.map(book => {
@@ -98,7 +98,7 @@ export default function MyBooks({ }) {
           )
         })}
       </StyledList>
-      <h3>A lire plus tard</h3>
+      <h3 style={{ paddingLeft: '20px' }}>A lire plus tard</h3>
       <StyledList>
       {planToReadlBookList.length === 0 && "Pas de livres à lire plus tard"} 
         {planToReadlBookList && planToReadlBookList.map(book => {
