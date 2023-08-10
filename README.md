@@ -1,6 +1,6 @@
 # BookMarks
 
-Bienvenue dans le projet **BookMarks** ! C'est une petite application réalisée en utilisant ReactJS qui vous permet de lister les livres que vous avez lues ET de prendre des notes de lecture pour mieux comprendre ce que vous lisez.
+Bienvenue dans le projet **BookMarks** ! C'est une petite application réalisée en utilisant ReactJS qui vous permet de lister les livres que vous avez lues et de prendre des notes de lecture pour mieux comprendre ce que vous lisez.
 
 ## Prérequis
 
